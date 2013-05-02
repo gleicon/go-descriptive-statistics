@@ -2,10 +2,10 @@ package main
 
 import (
 	"fmt"
-	"github.com/gleicon/go-descriptive-statistics"
+	"github.com/gleicon/go-descriptive-statistics/descriptive-statistics"
 )
 
-var e = Enum{2, 6, 9, 3, 5, 1, 8, 3, 6, 9, 2}
+var e = descriptive_statistics.Enum{2, 6, 9, 3, 5, 1, 8, 3, 6, 9, 2}
 
 func main() {
 	fmt.Println("List size: ", e.Len())
