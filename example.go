@@ -1,8 +1,8 @@
 package main
 
 import (
-	"descriptive_statistics"
 	"fmt"
+	"github.com/gleicon/go-descriptive-statistics"
 )
 
 var e = Enum{2, 6, 9, 3, 5, 1, 8, 3, 6, 9, 2}
