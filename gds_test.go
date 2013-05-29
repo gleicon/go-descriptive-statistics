@@ -7,9 +7,22 @@ import (
 )
 
 var e = Enum{2, 6, 9, 3, 5, 1, 8, 3, 6, 9, 2}
+var string_array = []string{"2", "4", "6", "10.0"}
 
 func init() {
 	fmt.Println("Testing: ", e)
+}
+
+func TestNewEnumFromStringVector(t *testing.T) {
+	te := newEnumFromStringVector(string_array)
+
+	if te.Count() != 4 {
+		t.Error("Count Mismatch")
+	}
+
+	if te.Mean() != 5.5 {
+		t.Error("Mean error", te.Mean())
+	}
 }
 
 func TestLen(t *testing.T) {

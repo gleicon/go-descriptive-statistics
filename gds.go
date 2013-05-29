@@ -3,11 +3,26 @@
 package descriptive_statistics
 
 import (
+	"fmt"
 	"math"
 	"sort"
+	"strconv"
 )
 
 type Enum []float64
+
+func newEnumFromStringVector(sv []string) *Enum {
+	l := len(sv)
+	e := make(Enum, l)
+	for count, value := range sv {
+		fv, err := strconv.ParseFloat(value, 64)
+		if err != nil {
+			fmt.Printf("Error converting array to float array %s", err)
+		}
+		e[count] = fv
+	}
+	return &e
+}
 
 func (e Enum) Len() int {
 	return len(e)
