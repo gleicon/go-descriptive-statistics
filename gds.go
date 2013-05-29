@@ -11,7 +11,7 @@ import (
 
 type Enum []float64
 
-func newEnumFromStringVector(sv []string) *Enum {
+func NewEnumFromStringVector(sv []string) *Enum {
 	l := len(sv)
 	e := make(Enum, l)
 	for count, value := range sv {
